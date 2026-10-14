@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root { color-scheme: light; --background: #f5f8fc; --foreground: #1e293b; --card: #ffffff; --card-foreground: #1e293b; --popover: #fff; --popover-foreground: #1e293b; --primary: #123b6b; --primary-foreground: #fff; --secondary: #eef5fa; --secondary-foreground: #2568a6; --muted: #f1f5f9; --muted-foreground: #64748b; --accent: #eef5fa; --accent-foreground: #2568a6; --destructive: #d56d4b; --border: #e2e8f0; --input: #e2e8f0; --ring: #4c91be; --radius: .75rem; --sidebar: #123b6b; --sidebar-foreground: #fff; }
+* { box-sizing: border-box; border-color: var(--border); }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; }
+button, input, select { font: inherit; }
+button { cursor: pointer; }
+.login-bg { position:relative; isolation:isolate; background-image:linear-gradient(135deg, rgba(8,35,67,.78), rgba(20,91,150,.46)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pln%20background-cueIlLsMeXhZMV1EZivUhGFO8xzOas.png'); background-position:center; background-size:cover; background-attachment:fixed; }
+.dashboard-shell { position:relative; isolation:isolate; background-image:linear-gradient(rgba(242,247,252,.91), rgba(242,247,252,.96)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pln%20background-cueIlLsMeXhZMV1EZivUhGFO8xzOas.png'); background-position:center top; background-size:cover; background-attachment:fixed; }
+.nav-item { display:flex; width:100%; align-items:center; gap:.75rem; border-radius:.65rem; padding:.72rem .8rem; color:#c8dcf1; font-size:.75rem; text-align:left; transition:.2s; }
+.nav-item:hover, .nav-item.active { background:rgba(255,255,255,.12); color:#fff; }
+.nav-item.active { box-shadow: inset 3px 0 #f6b63c; }
+.label { display:block; margin-bottom:.4rem; color:#64748b; font-size:.7rem; font-weight:600; }
+.input { width:100%; border:1px solid #dce5ee; border-radius:.6rem; background:#fff; padding:.65rem .75rem; color:#334155; font-size:.75rem; outline:none; transition:.2s; }
+.input:focus { border-color:#4c91be; box-shadow:0 0 0 3px rgba(76,145,190,.12); }
+.primary-button { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border-radius:.6rem; background:#2568a6; padding:.65rem .9rem; color:#fff; font-size:.75rem; font-weight:700; transition:.2s; box-shadow:0 4px 12px rgba(37,104,166,.18); }
+.primary-button:hover { background:#1f598e; transform:translateY(-1px); }
+.secondary-button { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; border:1px solid #dce5ee; border-radius:.6rem; background:#fff; padding:.62rem .8rem; color:#64748b; font-size:.72rem; font-weight:600; }
+.secondary-button:hover, .icon-button:hover { background:#f8fafc; }
+.icon-button, .table-action, .pagination { display:grid; place-items:center; border:1px solid #e2e8f0; border-radius:.5rem; background:#fff; color:#64748b; }
+.icon-button { height:36px; width:36px; }
+.table-action { height:28px; width:28px; border-color:transparent; background:transparent; }
+.table-action:hover { background:#eef5fa; color:#2568a6; }
+.table-action.danger:hover { background:#fff1ed; color:#d56d4b; }
+.role-option { display:flex; align-items:center; justify-content:center; gap:.45rem; border:1px solid #dce5ee; border-radius:.6rem; padding:.65rem; color:#64748b; font-size:.75rem; font-weight:600; }
+.role-option.selected { border-color:#4c91be; background:#eef5fa; color:#2568a6; }
+.card { border:1px solid #e8eef4; border-radius:1rem; background:#fff; padding:1.25rem; box-shadow:0 4px 15px rgba(23,55,89,.035); }
+.eyebrow { color:#4c91be; font-size:.65rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+.section-title { font-size:.9rem; font-weight:700; color:#1e293b; }
+.section-subtitle { margin-top:.25rem; color:#94a3b8; font-size:.7rem; }
+.stat-icon { display:grid; height:38px; width:38px; place-items:center; border-radius:.7rem; }
+.stat-icon svg { height:18px; width:18px; }
+.stat-icon.blue { background:#e5f1f8; color:#2874aa; } .stat-icon.gold { background:#fff3d8; color:#c5891c; } .stat-icon.green { background:#e7f6ef; color:#31a56b; } .stat-icon.red { background:#fff0eb; color:#d56d4b; }
+.data-table { width:100%; border-collapse:collapse; text-align:left; font-size:.71rem; }
+.data-table th { background:#f8fafc; padding:.8rem .75rem; color:#94a3b8; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap; }
+.data-table td { border-top:1px solid #eef2f6; padding:.85rem .75rem; color:#64748b; vertical-align:middle; }
+.data-table tbody tr:hover { background:#fbfdff; }
+.status-pill { display:inline-flex; white-space:nowrap; border-radius:999px; padding:.28rem .5rem; font-size:.6rem; font-weight:700; }
+.pill-green { background:#e7f6ef; color:#26915d; } .pill-gold { background:#fff3d8; color:#ae7610; } .pill-red { background:#fff0eb; color:#d05f3f; }
+.notif-icon { display:grid; height:30px; width:30px; flex:none; place-items:center; border-radius:.55rem; } .notif-icon.orange { background:#fff3d8; color:#c5891c; } .notif-icon.blue { background:#e5f1f8; color:#2874aa; } .notif-icon.red { background:#fff0eb; color:#d56d4b; }
+.readonly-field { border:1px solid #e2e8f0; border-radius:.6rem; background:#f8fafc; padding:.65rem .75rem; color:#475569; font-size:.75rem; }
+.toggle { height:22px; width:40px; border-radius:999px; background:#cbd5e1; padding:3px; } .toggle div { height:16px; width:16px; border-radius:50%; background:#fff; transition:.2s; } .toggle.on { background:#4c91be; } .toggle.on div { margin-left:18px; }
+.modal-backdrop { position:fixed; inset:0; z-index:60; display:grid; place-items:center; background:rgba(15,35,55,.42); padding:1rem; backdrop-filter:blur(3px); }
+.modal-card { width:100%; overflow:hidden; border-radius:1rem; background:#fff; box-shadow:0 20px 60px rgba(15,35,55,.22); }
+.pagination { height:28px; min-width:28px; font-size:.7rem; } .pagination.active { background:#2568a6; color:#fff; border-color:#2568a6; }
+@media (max-width:640px){ .data-table th,.data-table td{padding:.7rem .55rem}.card{padding:1rem} }
